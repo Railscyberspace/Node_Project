@@ -18,4 +18,7 @@ myEmitter.on('someEvent', (msg) =>
     console.log(msg);
 });
 
-myEmitter.emit('someEvent', 'The girl Ruby is emited')
+myEmitter.emit('someEvent', 'The girl Ruby is emited');
+
+
+
