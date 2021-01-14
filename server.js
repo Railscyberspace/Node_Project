@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const server = http.createServer(function (req, res) 
+const server = http.createServer(function (req, res)
 {
     console.log('request was made: ' + req.url);
 
