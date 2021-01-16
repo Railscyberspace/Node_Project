@@ -1,3 +1,4 @@
+//Basic Routing 
 const http = require('http');
 const fs = require('fs');
 
@@ -13,7 +14,7 @@ const server = http.createServer(function (req, res)
         res.writeHead(200, { 'Content-Type': 'text/html' });
         fs.createReadStream(__dirname + '/contact.html').pipe(res);
     } else if (req.url === './api/Ruby')
-    {
+    {   //Still have to work on this conditional statments
         var Ruby = [{ name: 'Jason', age: 5 }, { name: 'Zenitha', age: 11 }];
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(Ruby));
