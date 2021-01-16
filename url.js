@@ -14,9 +14,13 @@ const server = http.createServer(function (req, res)
         fs.createReadStream(__dirname + '/contact.html').pipe(res);
     } else if (req.url === './api/Ruby')
     {
-        const Ruby = [{ name: 'Jason', age: 5 }, { name: 'Zenitha', age: 11 }];
+        var Ruby = [{ name: 'Jason', age: 5 }, { name: 'Zenitha', age: 11 }];
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(Ruby));
+    } else
+    {
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        fs.createReadStream(__dirname + '/404.html').pipe(res);
     }
 });
 
