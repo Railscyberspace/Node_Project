@@ -1,5 +1,5 @@
 {
-  "name": "chatapp",
+  "name": "app",
   "version": "1.0.0",
   "description": "Chatapp",
   "main": "Emit.js",
@@ -11,10 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/SundayAbamjnr/Node_Project.git"
   },
-  "author": "",
+  "author": "Sunday Abam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SundayAbamjnr/Node_Project/issues"
   },
-  "homepage": "https://github.com/SundayAbamjnr/Node_Project#readme"
+  "homepage": "https://github.com/SundayAbamjnr/Node_Project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
 }
