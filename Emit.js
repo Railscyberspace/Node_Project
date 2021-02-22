@@ -1,28 +1,26 @@
 
+const express = require("express");
 
-//Emiter Examples//
-let events = require('events');
-let util = require('util');
+const app = express();
 
-let Person = (name) =>
+app.get("/", ((req, res) =>
 {
-    this.name = name;
-};
+    res.send(`Hello Ruby` );
+}));
 
-util.inherits(Person, events.EventEmitter);
 
-let Ruby = new Person('Ruby');
-let James = new Person('James');
-let Jason = new Person('Jason');
-
-let People = [Ruby, James, Jason];
-People.forEach = (Person) =>
+app.get("/profile/:id", ((req, res) =>
 {
-    Person.on('Speak', (msg) =>
-    {
-        console.log(Person.name + 'Said: ' + msg);
-    });
-};
+    res.send("Welcome" + req.params.id);
+}));
 
-Ruby.emit('Speak', 'Said Mummy teach me Programing I have grown Up Now');
+//Using express to send files to the broswers.
 
+app.get("/index", ((req, res) =>
+{
+    res.sendFile(__dirname + "/index.html");
+}));
+
+const PORT = 8000
+app.listen(8000);
+console.log(`Listing at port` +" "+  PORT);
